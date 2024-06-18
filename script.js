@@ -27,7 +27,13 @@ function addRoom() {
 
         const roomList = document.getElementById('roomList');
         const listItem = document.createElement('li');
-        listItem.innerHTML = `<strong>${roomType} room with ${techSet} technology:</strong>`;
+        listItem.innerHTML = `
+            <strong>${roomType} room with ${techSet} technology:</strong>
+            <div>
+                <label for="note-${roomType}-${techSet}">Notes:</label>
+                <input type="text" id="note-${roomType}-${techSet}" placeholder="Enter notes for this room">
+            </div>
+        `;
 
         const equipmentList = document.createElement('ul');
         room.equipment.forEach(equip => {
@@ -45,7 +51,7 @@ function addRoom() {
         listItem.appendChild(equipmentList);
         roomList.appendChild(listItem);
 
-        selectedRooms.push({roomType, techSet, room});
+        selectedRooms.push({roomType, techSet, room, notesFieldId: `note-${roomType}-${techSet}`});
 
         document.getElementById('totalEquipment').textContent = totalEquipment;
         document.getElementById('totalServices').textContent = totalServices;
@@ -88,12 +94,18 @@ function removeRoom(listItem, room) {
 }
 
 function exportData() {
-    let csvContent = "data:text/csv;charset=utf-8,Room Type,Technology Set,Equipment,Cost,Services,Support,Licenses,Total Cost\n";
+    const projectName = document.getElementById('projectName').value;
+    const contactName = document.getElementById('contactName').value;
+    const contactEmail = document.getElementById('contactEmail').value;
 
-    selectedRooms.forEach(({ roomType, techSet, room }) => {
+    let csvContent = "data:text/csv;charset=utf-8,Project Name,Contact Name,Contact Email,Room Type,Technology Set,Equipment,Cost,Services,Support,Licenses,Total Cost,Notes\n";
+    csvContent += `${projectName},${contactName},${contactEmail},,,,,,,,\n`;
+
+    selectedRooms.forEach(({ roomType, techSet, room, notesFieldId }) => {
+        const notes = document.getElementById(notesFieldId).value;
         room.equipment.forEach(equip => {
             const totalRoomCost = equip.cost + room.services + room.support + room.licenses;
-            const row = `${roomType},${techSet},${equip.name},${equip.cost},${room.services},${room.support},${room.licenses},${totalRoomCost}\n`;
+            const row = `${roomType},${techSet},${equip.name},${equip.cost},${room.services},${room.support},${room.licenses},${totalRoomCost},${notes}\n`;
             csvContent += row;
         });
     });
@@ -106,3 +118,4 @@ function exportData() {
     link.click();
     document.body.removeChild(link);
 }
+  
