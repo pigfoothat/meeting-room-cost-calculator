@@ -1,0 +1,17 @@
+[
+    {
+        "room_type": "Small",
+        "technology_set": "Basic",
+        "cost": 1000
+    },
+    {
+        "room_type": "Medium",
+        "technology_set": "Standard",
+        "cost": 2000
+    },
+    {
+        "room_type": "Large",
+        "technology_set": "Advanced",
+        "cost": 3000
+    }
+]
