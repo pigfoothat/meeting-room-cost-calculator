@@ -25,6 +25,3 @@ function addRoom() {
         document.getElementById('totalCost').textContent = totalCost;
     }
 }
-
-
-
