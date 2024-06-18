@@ -7,34 +7,35 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Meeting Room Technology Cost Calculator</h1>
-    <div>
-        <label for="roomType">Room Type:</label>
-        <select id="roomType">
-            <option value="Small">Small</option>
-            <option value="Medium">Medium</option>
-            <option value="Large">Large</option>
-            <option value="Extra Large">Extra Large</option>
-        </select>
+    <div class="container">
+        <h1>Meeting Room Technology Cost Calculator</h1>
+        <div>
+            <label for="roomType">Room Type:</label>
+            <select id="roomType">
+                <option value="Small">Small</option>
+                <option value="Medium">Medium</option>
+                <option value="Large">Large</option>
+                <option value="Extra Large">Extra Large</option>
+            </select>
+        </div>
+        <div>
+            <label for="techSet">Technology Set:</label>
+            <select id="techSet">
+                <option value="Presentation">Presentation</option>
+                <option value="Executive Video Conference">Executive Video Conference</option>
+                <option value="Cost Efficient Video Conference">Cost Efficient Video Conference</option>
+            </select>
+        </div>
+        <button onclick="addRoom()">Add Room</button>
+        <h2>Selected Rooms</h2>
+        <ul id="roomList"></ul>
+        <h2>Total Costs:</h2>
+        <p>Equipment: $<span id="totalEquipment">0</span></p>
+        <p>Professional Services: $<span id="totalServices">0</span></p>
+        <p>Support: $<span id="totalSupport">0</span></p>
+        <p>Licenses: $<span id="totalLicenses">0</span></p>
+        <p>Total: $<span id="totalCost">0</span></p>
     </div>
-    <div>
-        <label for="techSet">Technology Set:</label>
-        <select id="techSet">
-            <option value="Presentation">Presentation</option>
-            <option value="Executive Video Conference">Executive Video Conference</option>
-            <option value="Cost Efficient Video Conference">Cost Efficient Video Conference</option>
-        </select>
-    </div>
-    <button onclick="addRoom()">Add Room</button>
-    <h2>Selected Rooms</h2>
-    <ul id="roomList"></ul>
-    <h2>Total Costs:</h2>
-    <p>Equipment: $<span id="totalEquipment">0</span></p>
-    <p>Professional Services: $<span id="totalServices">0</span></p>
-    <p>Support: $<span id="totalSupport">0</span></p>
-    <p>Licenses: $<span id="totalLicenses">0</span></p>
-    <p>Total: $<span id="totalCost">0</span></p>
-
     <script src="script.js"></script>
 </body>
 </html>
