@@ -6,6 +6,11 @@
     },
     {
         "room_type": "Medium",
+        "technology_set": "Basic",
+        "cost": 1000
+    },
+    {
+        "room_type": "Medium",
         "technology_set": "Standard",
         "cost": 2000
     },
