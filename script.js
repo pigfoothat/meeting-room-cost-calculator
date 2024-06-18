@@ -1,6 +1,7 @@
 let roomData = [];
 let totalCost = 0;
 
+// Load JSON data
 fetch('data.json')
     .then(response => response.json())
     .then(data => {
@@ -24,3 +25,5 @@ function addRoom() {
         document.getElementById('totalCost').textContent = totalCost;
     }
 }
+
+
