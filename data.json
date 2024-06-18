@@ -1,17 +1,18 @@
 [
-    {"room_type": "Small", "technology_set": "Presentation", "cost": 1000},
-    {"room_type": "Medium", "technology_set": "Presentation", "cost": 2000},
-    {"room_type": "Large", "technology_set": "Presentation", "cost": 3000},
-    {"room_type": "Extra Large", "technology_set": "Presentation", "cost": 4000},
-    
-    {"room_type": "Small", "technology_set": "Executive Video Conference", "cost": 1500},
-    {"room_type": "Medium", "technology_set": "Executive Video Conference", "cost": 2500},
-    {"room_type": "Large", "technology_set": "Executive Video Conference", "cost": 3500},
-    {"room_type": "Extra Large", "technology_set": "Executive Video Conference", "cost": 4500},
-    
-    {"room_type": "Small", "technology_set": "Cost Efficient Video Conference", "cost": 800},
-    {"room_type": "Medium", "technology_set": "Cost Efficient Video Conference", "cost": 1800},
-    {"room_type": "Large", "technology_set": "Cost Efficient Video Conference", "cost": 2800},
-    {"room_type": "Extra Large", "technology_set": "Cost Efficient Video Conference", "cost": 3800}
+    {"room_type": "Small", "technology_set": "Presentation", "cost": {"equipment": 600, "services": 200, "support": 100, "licenses": 100}},
+    {"room_type": "Medium", "technology_set": "Presentation", "cost": {"equipment": 1200, "services": 400, "support": 200, "licenses": 200}},
+    {"room_type": "Large", "technology_set": "Presentation", "cost": {"equipment": 1800, "services": 600, "support": 300, "licenses": 300}},
+    {"room_type": "Extra Large", "technology_set": "Presentation", "cost": {"equipment": 2400, "services": 800, "support": 400, "licenses": 400}},
+
+    {"room_type": "Small", "technology_set": "Executive Video Conference", "cost": {"equipment": 900, "services": 300, "support": 150, "licenses": 150}},
+    {"room_type": "Medium", "technology_set": "Executive Video Conference", "cost": {"equipment": 1500, "services": 500, "support": 250, "licenses": 250}},
+    {"room_type": "Large", "technology_set": "Executive Video Conference", "cost": {"equipment": 2100, "services": 700, "support": 350, "licenses": 350}},
+    {"room_type": "Extra Large", "technology_set": "Executive Video Conference", "cost": {"equipment": 2700, "services": 900, "support": 450, "licenses": 450}},
+
+    {"room_type": "Small", "technology_set": "Cost Efficient Video Conference", "cost": {"equipment": 400, "services": 200, "support": 100, "licenses": 100}},
+    {"room_type": "Medium", "technology_set": "Cost Efficient Video Conference", "cost": {"equipment": 1000, "services": 400, "support": 200, "licenses": 200}},
+    {"room_type": "Large", "technology_set": "Cost Efficient Video Conference", "cost": {"equipment": 1600, "services": 600, "support": 300, "licenses": 300}},
+    {"room_type": "Extra Large", "technology_set": "Cost Efficient Video Conference", "cost": {"equipment": 2200, "services": 800, "support": 400, "licenses": 400}}
 ]
+
 
