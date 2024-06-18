@@ -19,19 +19,29 @@ function addRoom() {
     const room = roomData.find(r => r.room_type === roomType && r.technology_set === techSet);
 
     if (room) {
-        totalEquipment += room.cost.equipment;
-        totalServices += room.cost.services;
-        totalSupport += room.cost.support;
-        totalLicenses += room.cost.licenses;
-        totalCost += room.cost.equipment + room.cost.services + room.cost.support + room.cost.licenses;
+        totalServices += room.services;
+        totalSupport += room.support;
+        totalLicenses += room.licenses;
+        totalCost += room.services + room.support + room.licenses;
 
         const roomList = document.getElementById('roomList');
         const listItem = document.createElement('li');
-        listItem.textContent = `${roomType} room with ${techSet} technology: Equipment: $${room.cost.equipment}, Services: $${room.cost.services}, Support: $${room.cost.support}, Licenses: $${room.cost.licenses}, Total: $${room.cost.equipment + room.cost.services + room.cost.support + room.cost.licenses}`;
-        const removeButton = document.createElement('button');
-        removeButton.textContent = 'Remove';
-        removeButton.onclick = () => removeRoom(listItem, room.cost);
-        listItem.appendChild(removeButton);
+        listItem.innerHTML = `<strong>${roomType} room with ${techSet} technology:</strong>`;
+
+        const equipmentList = document.createElement('ul');
+        room.equipment.forEach(equip => {
+            const equipItem = document.createElement('li');
+            equipItem.textContent = `${equip.name}: $${equip.cost}`;
+            const removeButton = document.createElement('button');
+            removeButton.textContent = 'Remove';
+            removeButton.onclick = () => removeEquipment(equipItem, equip.cost, room, listItem);
+            equipItem.appendChild(removeButton);
+            equipmentList.appendChild(equipItem);
+            totalEquipment += equip.cost;
+            totalCost += equip.cost;
+        });
+
+        listItem.appendChild(equipmentList);
         roomList.appendChild(listItem);
 
         document.getElementById('totalEquipment').textContent = totalEquipment;
@@ -42,16 +52,27 @@ function addRoom() {
     }
 }
 
-function removeRoom(listItem, cost) {
-    const roomList = document.getElementById('roomList');
-    roomList.removeChild(listItem);
-    totalEquipment -= cost.equipment;
-    totalServices -= cost.services;
-    totalSupport -= cost.support;
-    totalLicenses -= cost.licenses;
-    totalCost -= cost.equipment + cost.services + cost.support + cost.licenses;
+function removeEquipment(equipItem, cost, room, listItem) {
+    equipItem.remove();
+    totalEquipment -= cost;
+    totalCost -= cost;
+
+    // Check if any equipment left
+    if (!listItem.querySelector('ul').hasChildNodes()) {
+        removeRoom(listItem, room);
+    }
 
     document.getElementById('totalEquipment').textContent = totalEquipment;
+    document.getElementById('totalCost').textContent = totalCost;
+}
+
+function removeRoom(listItem, room) {
+    listItem.remove();
+    totalServices -= room.services;
+    totalSupport -= room.support;
+    totalLicenses -= room.licenses;
+    totalCost -= room.services + room.support + room.licenses;
+
     document.getElementById('totalServices').textContent = totalServices;
     document.getElementById('totalSupport').textContent = totalSupport;
     document.getElementById('totalLicenses').textContent = totalLicenses;
