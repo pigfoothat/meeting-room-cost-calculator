@@ -57,4 +57,3 @@ function removeRoom(listItem, cost) {
     document.getElementById('totalLicenses').textContent = totalLicenses;
     document.getElementById('totalCost').textContent = totalCost;
 }
-
