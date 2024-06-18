@@ -1,16 +1,43 @@
-[
-    {"room_type": "Small Presentation", "technology_set": "Basic", "cost": 1000},
-    {"room_type": "Medium Presentation", "technology_set": "Standard", "cost": 2000},
-    {"room_type": "Large Presentation", "technology_set": "Advanced", "cost": 3000},
-    {"room_type": "Extra Large Presentation", "technology_set": "Premium", "cost": 4000},
-    
-    {"room_type": "Small Executive Video Conference", "technology_set": "Basic", "cost": 1500},
-    {"room_type": "Medium Executive Video Conference", "technology_set": "Standard", "cost": 2500},
-    {"room_type": "Large Executive Video Conference", "technology_set": "Advanced", "cost": 3500},
-    {"room_type": "Extra Large Executive Video Conference", "technology_set": "Premium", "cost": 4500},
-    
-    {"room_type": "Small Cost Efficient Video Conference", "technology_set": "Basic", "cost": 800},
-    {"room_type": "Medium Cost Efficient Video Conference", "technology_set": "Standard", "cost": 1800},
-    {"room_type": "Large Cost Efficient Video Conference", "technology_set": "Advanced", "cost": 2800},
-    {"room_type": "Extra Large Cost Efficient Video Conference", "technology_set": "Premium", "cost": 3800}
-]
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meeting Room Technology Cost Calculator</title>
+</head>
+<body>
+    <h1>Meeting Room Technology Cost Calculator</h1>
+    <div>
+        <label for="roomType">Room Type:</label>
+        <select id="roomType">
+            <option value="Small Presentation">Small Presentation</option>
+            <option value="Medium Presentation">Medium Presentation</option>
+            <option value="Large Presentation">Large Presentation</option>
+            <option value="Extra Large Presentation">Extra Large Presentation</option>
+            <option value="Small Executive Video Conference">Small Executive Video Conference</option>
+            <option value="Medium Executive Video Conference">Medium Executive Video Conference</option>
+            <option value="Large Executive Video Conference">Large Executive Video Conference</option>
+            <option value="Extra Large Executive Video Conference">Extra Large Executive Video Conference</option>
+            <option value="Small Cost Efficient Video Conference">Small Cost Efficient Video Conference</option>
+            <option value="Medium Cost Efficient Video Conference">Medium Cost Efficient Video Conference</option>
+            <option value="Large Cost Efficient Video Conference">Large Cost Efficient Video Conference</option>
+            <option value="Extra Large Cost Efficient Video Conference">Extra Large Cost Efficient Video Conference</option>
+        </select>
+    </div>
+    <div>
+        <label for="techSet">Technology Set:</label>
+        <select id="techSet">
+            <option value="Basic">Basic</option>
+            <option value="Standard">Standard</option>
+            <option value="Advanced">Advanced</option>
+            <option value="Premium">Premium</option>
+        </select>
+    </div>
+    <button onclick="addRoom()">Add Room</button>
+    <h2>Selected Rooms</h2>
+    <ul id="roomList"></ul>
+    <h2>Total Cost: $<span id="totalCost">0</span></h2>
+
+    <script src="script.js"></script>
+</body>
+</html>
