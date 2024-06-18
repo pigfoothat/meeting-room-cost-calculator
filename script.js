@@ -4,6 +4,7 @@ let totalServices = 0;
 let totalSupport = 0;
 let totalLicenses = 0;
 let totalCost = 0;
+const selectedRooms = [];
 
 // Load JSON data
 fetch('data.json')
@@ -44,6 +45,8 @@ function addRoom() {
         listItem.appendChild(equipmentList);
         roomList.appendChild(listItem);
 
+        selectedRooms.push({roomType, techSet, room});
+
         document.getElementById('totalEquipment').textContent = totalEquipment;
         document.getElementById('totalServices').textContent = totalServices;
         document.getElementById('totalSupport').textContent = totalSupport;
@@ -73,8 +76,34 @@ function removeRoom(listItem, room) {
     totalLicenses -= room.licenses;
     totalCost -= room.services + room.support + room.licenses;
 
+    const index = selectedRooms.findIndex(r => r.room === room);
+    if (index !== -1) {
+        selectedRooms.splice(index, 1);
+    }
+
     document.getElementById('totalServices').textContent = totalServices;
     document.getElementById('totalSupport').textContent = totalSupport;
     document.getElementById('totalLicenses').textContent = totalLicenses;
     document.getElementById('totalCost').textContent = totalCost;
 }
+
+function exportData() {
+    let csvContent = "data:text/csv;charset=utf-8,Room Type,Technology Set,Equipment,Cost,Services,Support,Licenses,Total Cost\n";
+
+    selectedRooms.forEach(({ roomType, techSet, room }) => {
+        room.equipment.forEach(equip => {
+            const totalRoomCost = equip.cost + room.services + room.support + room.licenses;
+            const row = `${roomType},${techSet},${equip.name},${equip.cost},${room.services},${room.support},${room.licenses},${totalRoomCost}\n`;
+            csvContent += row;
+        });
+    });
+
+    const encodedUri = encodeURI(csvContent);
+    const link = document.createElement("a");
+    link.setAttribute("href", encodedUri);
+    link.setAttribute("download", "meeting_room_costs.csv");
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+}
+
