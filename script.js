@@ -1,10 +1,12 @@
-const roomData = [
-    { room_type: "Small", technology_set: "Basic", cost: 1000 },
-    { room_type: "Medium", technology_set: "Standard", cost: 2000 },
-    { room_type: "Large", technology_set: "Advanced", cost: 3000 }
-];
-
+let roomData = [];
 let totalCost = 0;
+
+fetch('data.json')
+    .then(response => response.json())
+    .then(data => {
+        roomData = data;
+    })
+    .catch(error => console.error('Error loading JSON:', error));
 
 function addRoom() {
     const roomType = document.getElementById('roomType').value;
