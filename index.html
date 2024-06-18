@@ -9,6 +9,20 @@
 <body>
     <div class="container">
         <h1>Meeting Room Technology Cost Calculator</h1>
+        
+        <div>
+            <label for="projectName">Project Name:</label>
+            <input type="text" id="projectName" placeholder="Enter project name">
+        </div>
+        <div>
+            <label for="contactName">Contact Name:</label>
+            <input type="text" id="contactName" placeholder="Enter contact name">
+        </div>
+        <div>
+            <label for="contactEmail">Contact Email:</label>
+            <input type="email" id="contactEmail" placeholder="Enter contact email">
+        </div>
+
         <div>
             <label for="roomType">Room Type:</label>
             <select id="roomType">
@@ -27,8 +41,10 @@
             </select>
         </div>
         <button onclick="addRoom()">Add Room</button>
+
         <h2>Selected Rooms</h2>
         <ul id="roomList"></ul>
+        
         <h2>Total Costs:</h2>
         <p>Equipment: $<span id="totalEquipment">0</span></p>
         <p>Professional Services: $<span id="totalServices">0</span></p>
@@ -40,4 +56,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
