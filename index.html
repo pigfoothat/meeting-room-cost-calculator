@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meeting Room Technology Cost Calculator</title>
+</head>
+<body>
+    <h1>Meeting Room Technology Cost Calculator</h1>
+    <div>
+        <label for="roomType">Room Type:</label>
+        <select id="roomType">
+            <option value="Small">Small</option>
+            <option value="Medium">Medium</option>
+            <option value="Large">Large</option>
+        </select>
+    </div>
+    <div>
+        <label for="techSet">Technology Set:</label>
+        <select id="techSet">
+            <option value="Basic">Basic</option>
+            <option value="Standard">Standard</option>
+            <option value="Advanced">Advanced</option>
+        </select>
+    </div>
+    <button onclick="addRoom()">Add Room</button>
+    <h2>Selected Rooms</h2>
+    <ul id="roomList"></ul>
+    <h2>Total Cost: $<span id="totalCost">0</span></h2>
+
+    <script src="script.js"></script>
+</body>
+</html>
