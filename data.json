@@ -1,18 +1,205 @@
 [
-    {"room_type": "Small", "technology_set": "Presentation", "cost": {"equipment": 600, "services": 200, "support": 100, "licenses": 100}},
-    {"room_type": "Medium", "technology_set": "Presentation", "cost": {"equipment": 1200, "services": 400, "support": 200, "licenses": 200}},
-    {"room_type": "Large", "technology_set": "Presentation", "cost": {"equipment": 1800, "services": 600, "support": 300, "licenses": 300}},
-    {"room_type": "Extra Large", "technology_set": "Presentation", "cost": {"equipment": 2400, "services": 800, "support": 400, "licenses": 400}},
-
-    {"room_type": "Small", "technology_set": "Executive Video Conference", "cost": {"equipment": 900, "services": 300, "support": 150, "licenses": 150}},
-    {"room_type": "Medium", "technology_set": "Executive Video Conference", "cost": {"equipment": 1500, "services": 500, "support": 250, "licenses": 250}},
-    {"room_type": "Large", "technology_set": "Executive Video Conference", "cost": {"equipment": 2100, "services": 700, "support": 350, "licenses": 350}},
-    {"room_type": "Extra Large", "technology_set": "Executive Video Conference", "cost": {"equipment": 2700, "services": 900, "support": 450, "licenses": 450}},
-
-    {"room_type": "Small", "technology_set": "Cost Efficient Video Conference", "cost": {"equipment": 400, "services": 200, "support": 100, "licenses": 100}},
-    {"room_type": "Medium", "technology_set": "Cost Efficient Video Conference", "cost": {"equipment": 1000, "services": 400, "support": 200, "licenses": 200}},
-    {"room_type": "Large", "technology_set": "Cost Efficient Video Conference", "cost": {"equipment": 1600, "services": 600, "support": 300, "licenses": 300}},
-    {"room_type": "Extra Large", "technology_set": "Cost Efficient Video Conference", "cost": {"equipment": 2200, "services": 800, "support": 400, "licenses": 400}}
-]
-
+    {
+        "room_type": "Small",
+        "technology_set": "Presentation",
+        "equipment": [
+            {"name": "Screen 1", "cost": 200},
+            {"name": "Screen 2", "cost": 200},
+            {"name": "Table Cubby", "cost": 50},
+            {"name": "Room Booking Panel", "cost": 100},
+            {"name": "Video Conference Unit", "cost": 250},
+            {"name": "Control Panel", "cost": 150},
+            {"name": "Speakers", "cost": 50},
+            {"name": "Microphones", "cost": 100}
+        ],
+        "services": 200,
+        "support": 100,
+        "licenses": 100
+    },
+    {
+        "room_type": "Medium",
+        "technology_set": "Presentation",
+        "equipment": [
+            {"name": "Screen 1", "cost": 400},
+            {"name": "Screen 2", "cost": 400},
+            {"name": "Table Cubby", "cost": 100},
+            {"name": "Room Booking Panel", "cost": 200},
+            {"name": "Video Conference Unit", "cost": 500},
+            {"name": "Control Panel", "cost": 300},
+            {"name": "Speakers", "cost": 100},
+            {"name": "Microphones", "cost": 200}
+        ],
+        "services": 400,
+        "support": 200,
+        "licenses": 200
+    },
+    {
+        "room_type": "Large",
+        "technology_set": "Presentation",
+        "equipment": [
+            {"name": "Screen 1", "cost": 600},
+            {"name": "Screen 2", "cost": 600},
+            {"name": "Table Cubby", "cost": 150},
+            {"name": "Room Booking Panel", "cost": 300},
+            {"name": "Video Conference Unit", "cost": 750},
+            {"name": "Control Panel", "cost": 450},
+            {"name": "Speakers", "cost": 150},
+            {"name": "Microphones", "cost": 300}
+        ],
+        "services": 600,
+        "support": 300,
+        "licenses": 300
+    },
+    {
+        "room_type": "Extra Large",
+        "technology_set": "Presentation",
+        "equipment": [
+            {"name": "Screen 1", "cost": 800},
+            {"name": "Screen 2", "cost": 800},
+            {"name": "Table Cubby", "cost": 200},
+            {"name": "Room Booking Panel", "cost": 400},
+            {"name": "Video Conference Unit", "cost": 1000},
+            {"name": "Control Panel", "cost": 600},
+            {"name": "Speakers", "cost": 200},
+            {"name": "Microphones", "cost": 400}
+        ],
+        "services": 800,
+        "support": 400,
+        "licenses": 400
+    },
+    {
+        "room_type": "Small",
+        "technology_set": "Executive Video Conference",
+        "equipment": [
+            {"name": "Screen 1", "cost": 250},
+            {"name": "Screen 2", "cost": 250},
+            {"name": "Table Cubby", "cost": 60},
+            {"name": "Room Booking Panel", "cost": 120},
+            {"name": "Video Conference Unit", "cost": 300},
+            {"name": "Control Panel", "cost": 180},
+            {"name": "Speakers", "cost": 60},
+            {"name": "Microphones", "cost": 120}
+        ],
+        "services": 300,
+        "support": 150,
+        "licenses": 150
+    },
+    {
+        "room_type": "Medium",
+        "technology_set": "Executive Video Conference",
+        "equipment": [
+            {"name": "Screen 1", "cost": 500},
+            {"name": "Screen 2", "cost": 500},
+            {"name": "Table Cubby", "cost": 120},
+            {"name": "Room Booking Panel", "cost": 240},
+            {"name": "Video Conference Unit", "cost": 600},
+            {"name": "Control Panel", "cost": 360},
+            {"name": "Speakers", "cost": 120},
+            {"name": "Microphones", "cost": 240}
+        ],
+        "services": 500,
+        "support": 250,
+        "licenses": 250
+    },
+    {
+        "room_type": "Large",
+        "technology_set": "Executive Video Conference",
+        "equipment": [
+            {"name": "Screen 1", "cost": 750},
+            {"name": "Screen 2", "cost": 750},
+            {"name": "Table Cubby", "cost": 180},
+            {"name": "Room Booking Panel", "cost": 360},
+            {"name": "Video Conference Unit", "cost": 900},
+            {"name": "Control Panel", "cost": 540},
+            {"name": "Speakers", "cost": 180},
+            {"name": "Microphones", "cost": 360}
+        ],
+        "services": 700,
+        "support": 350,
+        "licenses": 350
+    },
+    {
+        "room_type": "Extra Large",
+        "technology_set": "Executive Video Conference",
+        "equipment": [
+            {"name": "Screen 1", "cost": 1000},
+            {"name": "Screen 2", "cost": 1000},
+            {"name": "Table Cubby", "cost": 240},
+            {"name": "Room Booking Panel", "cost": 480},
+            {"name": "Video Conference Unit", "cost": 1200},
+            {"name": "Control Panel", "cost": 720},
+            {"name": "Speakers", "cost": 240},
+            {"name": "Microphones", "cost": 480}
+        ],
+        "services": 900,
+        "support": 450,
+        "licenses": 450
+    },
+    {
+        "room_type": "Small",
+        "technology_set": "Cost Efficient Video Conference",
+        "equipment": [
+            {"name": "Screen 1", "cost": 100},
+            {"name": "Screen 2", "cost": 100},
+            {"name": "Table Cubby", "cost": 30},
+            {"name": "Room Booking Panel", "cost": 60},
+            {"name": "Video Conference Unit", "cost": 150},
+            {"name": "Control Panel", "cost": 90},
+            {"name": "Speakers", "cost": 30},
+            {"name": "Microphones", "cost": 60}
+        ],
+        "services": 200,
+        "support": 100,
+        "licenses": 100
+    },
+    {
+        "room_type": "Medium",
+        "technology_set": "Cost Efficient Video Conference",
+        "equipment": [
+            {"name": "Screen 1", "cost": 200},
+            {"name": "Screen 2", "cost": 200},
+            {"name": "Table Cubby", "cost": 60},
+            {"name": "Room Booking Panel", "cost": 120},
+            {"name": "Video Conference Unit", "cost": 300},
+            {"name": "Control Panel", "cost": 180},
+            {"name": "Speakers", "cost": 60},
+            {"name": "Microphones", "cost": 120}
+        ],
+        "services": 400,
+        "support": 200,
+        "licenses": 200
+    },
+    {
+        "room_type": "Large",
+        "technology_set": "Cost Efficient Video Conference",
+        "equipment": [
+            {"name": "Screen 1", "cost": 300},
+            {"name": "Screen 2", "cost": 300},
+            {"name": "Table Cubby", "cost": 90},
+            {"name": "Room Booking Panel", "cost": 180},
+            {"name": "Video Conference Unit", "cost": 450},
+            {"name": "Control Panel", "cost": 270},
+            {"name": "Speakers", "cost": 90},
+            {"name": "Microphones", "cost": 180}
+        ],
+        "services": 600,
+        "support": 300,
+        "licenses": 300
+    },
+    {
+        "room_type": "Extra Large",
+        "technology_set": "Cost Efficient Video Conference",
+        "equipment": [
+            {"name": "Screen 1", "cost": 400},
+            {"name": "Screen 2", "cost": 400},
+            {"name": "Table Cubby", "cost": 120},
+            {"name": "Room Booking Panel", "cost": 240},
+            {"name": "Video Conference Unit", "cost": 600},
+            {"name": "Control Panel", "cost": 360},
+            {"name": "Speakers", "cost": 120},
+            {"name": "Microphones", "cost": 240}
+        ],
+        "services": 800,
+        "support": 400,
+        "licenses": 400
 
