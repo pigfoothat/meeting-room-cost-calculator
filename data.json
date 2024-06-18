@@ -7,11 +7,11 @@
     {"room_type": "Small", "technology_set": "Executive Video Conference", "cost": 1500},
     {"room_type": "Medium", "technology_set": "Executive Video Conference", "cost": 2500},
     {"room_type": "Large", "technology_set": "Executive Video Conference", "cost": 3500},
-    {"room_type": "Extra", "technology_set": "Executive Video Conference", "cost": 4500},
+    {"room_type": "Extra Large", "technology_set": "Executive Video Conference", "cost": 4500},
     
     {"room_type": "Small", "technology_set": "Cost Efficient Video Conference", "cost": 800},
     {"room_type": "Medium", "technology_set": "Cost Efficient Video Conference", "cost": 1800},
-    {"room_type": "Large Cost", "technology_set": "Cost Efficient Video Conference", "cost": 2800},
+    {"room_type": "Large", "technology_set": "Cost Efficient Video Conference", "cost": 2800},
     {"room_type": "Extra Large", "technology_set": "Cost Efficient Video Conference", "cost": 3800}
 ]
-]
+
